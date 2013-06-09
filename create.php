@@ -49,13 +49,10 @@ foreach ($objects as $name => $object) {
                 $dirRead = dir($name);
                 $path    = $dirRead->path;
                 while ($entry = $dirRead->read()) {
-                    if (basename($name) == '.' || basename($name) == '..' || basename($name) == '.git') {
+                    if (is_dir($path . '/' . $entry)) {
                     } else {
-                        if (is_dir($path . '/' . $entry)) {
-                        } else {
-                            $item     = $path . '/' . $entry;
-                            $ignore[] = substr($item, strlen($current_path) + 1, 99999) . "\n";
-                        }
+                        $item     = $path . '/' . $entry;
+                        $ignore[] = substr($item, strlen($current_path) + 1, 99999) . "\n";
                     }
                 }
                 $dirRead->close();
