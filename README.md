@@ -3,9 +3,9 @@ Create.gitignore
 
 Creates a `gitignore.txt` file listing all files currently in localhost website.
 
-For use when developing add-ons, like plugins or themes or modules, for a core PHP application (framework-independent choice)
-and you do not want to store the core code within your github repository, you only want to use the repository
-for your own code.
+For use when developing add-ons, like plugins or themes or modules, for a core PHP application (framework-independent solution)
+and you only want to save the add-ons you are developing to your github repository. This process will list every
+folder and file within the website and write the list to a `gitignore.txt` file. Simply rename to `.gitignore` to use.
 
 **NOTE** For security purposes, do not use this approach on a production website, only on a localhost site.
 
@@ -17,6 +17,7 @@ for your own code.
  3. Open your browser, and navigate to the file within that site: ex. `http://localhost/site/create.php`
  4. Look for the `.gitignore.txt` file on the root of the localhost website.
  5. Rename `.gitignore.txt` to `.gitignore`
+ 6. Now, git remote to your repository, create or update your extensions and save only that work to your repository.
 
 ##Trouble-shooting:
 
